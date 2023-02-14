@@ -46,7 +46,7 @@ def calculate_regression_outsidemean(x,y):
 
     return regression_y
 total = 0
-repeat = 30000
+repeat = 10000
 
 x_min = 0
 x_max = 1000
@@ -58,7 +58,7 @@ for i in range(repeat):
     regression_y = calculate_regression_insidemean(x,y)
 
     total += time.perf_counter() - start
-    print(f'\r{i}/{repeat}',end='')
+    #print(f'\r{i}/{repeat}',end='')
 inside_score = total
 print(f'\n inside_ver : {inside_score}\n\n')
 
